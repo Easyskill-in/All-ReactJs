@@ -5,7 +5,7 @@ const Card = ({ Title, Desc }) => {
     // console.log(props)
 
     // const { Title, Desc } = props
- 
+
 
     return (
         <div className="card">
@@ -14,10 +14,10 @@ const Card = ({ Title, Desc }) => {
             </div>
             <div className="text">
 
-                <h2>{Title}</h2>
+                <h2>{Title}.</h2>
                 <p>{Desc}</p>
             </div>
-            <button>Click Me</button>
+            <button>Click Me!</button>
         </div>
     )
 }
