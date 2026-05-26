@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 const App = () => {
   const [Count, setCount] = useState(0)
   const [isActive, setIsActive] = useState(false)
+  const [Loading, setLoading] = useState(true)
   let i = 0;
 
   i++;
@@ -24,21 +25,51 @@ const App = () => {
     // console.log("The Value of i is ", i)
     console.log("The Value of Count is ", Count)
     console.log("The Value of isActive is ", isActive)
+    // setTimeout(() => {
+    //   setLoading(c => !c)
+    // }, 2000)
   }, [isActive])
+
+  // isActive ? console.log("Active State is True") : "";
+
+
+
+  // if (Loading) {
+  //   return <h1>Loading....</h1>
+  // }
 
   return (
     <div>
-      <h1>App.jsx</h1>
-      <h1>Count {Count}</h1>
-      <hr />
-      <button onClick={() => {
-        setCount(c => c + 1)
-      }}>Count</button>
-      <br />
-      <br />
-      <button onClick={() => {
-        setIsActive(c => !c)
-      }}>Toggle Active State</button>
+      <div className="main">
+
+
+        <h1>App.jsx</h1>
+        <h1>Count {Count || <span>Easyskill</span>}</h1>
+        <hr />
+        <button onClick={() => {
+          setCount(c => c + 1)
+        }}>Count</button>
+        <br />
+        <br />
+        <button onClick={() => {
+          setIsActive(c => !c)
+        }}>Toggle Active State</button>
+        {/* <hr /> */}
+      </div>
+      {/* {isActive ? (<div className="user-data">
+        <h1>Dog</h1>
+
+        <p>The dog (Canis familiaris or Canis lupus familiaris) is a domesticated descendant of wolves. Also called the domestic dog, it was selectively bred during the Late Pleistocene by hunter-gatherers. Dogs and the modern gray wolf share a common ancestor.[4] Dogs were the first species to be domesticated over 14,000 years ago, before the development of agriculture, though genetic studies suggest the domestication process may have begun over 25,000 years ago. Due to their long association with humans, dogs have gained the ability to thrive on a starch-rich diet that would be inadequate for other canids.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Retriever_in_water.jpg" alt="" height={200} />
+
+        <p>
+          Dogs have been bred for desired behaviors, sensory capabilities, and physical attributes. Dog breeds vary widely in shape, size, and color. They have the same number of bones (with the exception of the tail), powerful jaws that house around 42 teeth, and well-developed senses of smell, hearing, and sight. Compared to humans, dogs possess a superior sense of smell and hearing, but inferior visual acuity. Dogs perform many roles for humans, such as hunting, herding, pulling loads, protection, companionship, therapy, aiding disabled people, and assisting police and the military.
+
+          Communication in dogs includes eye gaze, facial expression, vocalization, body posture (including movements of bodies and limbs), and chemical communication (scents, pheromones, and taste). They mark their territories by urinating on them, which is more likely when entering a new environment. Over the millennia, dogs have uniquely adapted to human behavior; this adaptation includes being able to understand and communicate with humans. As such, the human–canine bond has been a topic of frequent study, and dogs' influence on human society has given them the sobriquet of "man's best friend".
+
+          The global dog population is estimated at 700 million to 1 billion, distributed around the world. The dog is the most popular pet in the United States, present in 34–40% of households. Developed countries make up approximately 20% of the global dog population, while around 75% of dogs are estimated to be from developing countries, mainly in the form of feral and street dogs.</p>
+      </div>) : <h1>User Is Not Active Yet</h1>} */}
+
     </div>
   )
 }
