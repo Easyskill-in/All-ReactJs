@@ -1,0 +1,33 @@
+ tbody {
+   background-color: rgb(234, 233, 233);
+ }
+
+
+ thead {
+   background-color: yellow;
+ }
+
+
+ .p1 {
+   background-color: lightpink;
+ }
+
+ .p2 {
+   background-color: lightblue;
+ }
+
+ .p3 {
+   background-color: lightcoral;
+ }
+
+ .p4 {
+   background-color: lightcyan;
+ }
+
+ .p5 {
+   background-color: lightgreen;
+ }
+
+ .yes {
+   opacity: 0.5;
+ }
