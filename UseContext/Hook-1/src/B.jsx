@@ -5,7 +5,7 @@ const B = (props) => {
     return (
         <div>
             <h1>B Component</h1>
-            <C />
+            <C></C>
         </div>
     )
 }
